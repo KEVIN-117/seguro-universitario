@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.set-animation-transalate{
+  animation: translate-animation infinite linear 5s;
+}
+
+
+@keyframes translate-animation{
+  0%, 100%{
+    transform: translateX(-30%);
+  }
+  50%{
+    transform: translateX(30%);
+  }
+}
+
+.menu-movile-button{
+  display: none;
+}
+@media (max-width: 540px){
+  .navigation{
+    background: #15161d;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .set-z-index{
+    z-index: 1000;
+  }
+
+  .active{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 85%;
+    height: 100vh;
+    transition:ease-in-out 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding-top: 20px;
+    padding-left: 5px;
+
+  }
+
+  .menu-movile-button{
+    display: block;
+  }
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  padding: 10px;
+  color: white;
+}
